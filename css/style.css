@@ -1,0 +1,313 @@
+:root{
+    --fuenteHeading:'Open Sans', sans-serif;
+    --fuenteParrafos:'PT Sans', sans-serif;
+    --primario:#784D3C;
+    --blanco:#fff;
+    --negro:#000;
+    --gris: #e1e1e1;
+
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;/*1 rem = 10px default 1 rem  = 16 px*/
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body{
+    font-family: var(--fuenteParrafos);
+    font-size: 1.6rem;/*tamaño de fuente*/
+    line-height: 2;/*interlineado*/
+  }
+  /**GLOBALES**/
+  .contenedor{
+    width: min(90%, 120rem);
+    padding-top: 4rem;
+    margin: 0 auto;/*centrar*/
+  }
+  a{
+    text-decoration: none;
+  }
+  img {
+    max-width: 100%;
+}
+  h1,h2,h3,h4{
+    font-family: var(--fuenteHeading);
+    line-height: 1.2;
+
+  }
+  h1{
+    font-size: 4.8rem;
+  }
+  h2{
+    font-size: 4rem;
+  }
+  h3{
+    font-size: 3rem;
+  }
+  h4{
+font-size: 2.8rem;
+  }
+/**utilidades**/
+.no-margin{
+margin: 0;
+}
+.no-padding
+{
+padding: 0;
+}
+.centrar-texto{
+text-align: center;
+}
+
+/**Header**/
+.webp .header{
+    background-image: url(../img/banner.webp);
+}
+
+.no-webp .header{
+    background-image: url(../img/banner.jpg);
+}
+.header{
+    /*background-image: url(../img/banner.jpg);*/
+    height: 60rem;/*si no hay nada en el header no se muestra a amneos de que le pongas altura*/
+    background-size: cover;
+    background-repeat: none;
+    background-position: center center;/*x center y center*/
+}
+
+
+
+.header__texto{
+    color: var(--blanco);
+    text-align: center;
+    margin-top: 5rem;
+}
+
+@media(min-width:768px){
+    .header__texto{
+        margin: 15rem;
+    }
+}
+/*contenedor*/
+
+@media(min-width:768px){
+    .contenedor
+    {
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+       /* align-items: center;*/
+        
+        
+    }
+}
+.logo__nombre{
+font-weight: 400;
+color: var(--blanco);
+}
+.logo__bold{
+font-weight: 700;
+}
+
+
+@media(min-width:768px){
+    .navegacion{
+        display:flex;
+        align-items: center;
+        gap: 2rem;   
+    }
+    .navegacion__enlace{
+        margin-left: 1rem;
+    }
+
+}
+.navegacion__enlace{
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    font-size: 1.6rem;
+
+}
+
+@media(min-width:768px){
+    .contenedor__principal{
+        
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        /*grid-template-columns:minmax(0,2fr) minmax(0,1fr);*/  
+        column-gap: 4rem;
+    }
+}
+
+.entrada{
+    border-bottom: 5px solid var(--gris); ;
+    margin-bottom: 1rem;
+}
+.entrada:last-of-type{
+    border: none;
+    margin-bottom: 0;
+}
+/*BOTONES*/
+.boton{
+    display: block;/*para que tome todo el espacio disponible*/
+    background-color: var(--negro);
+    font-family: var(--fuenteHeading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--blanco);
+    text-align: center;
+    text-transform: uppercase;
+    padding: 1rem 3rem;
+    margin-bottom: 2rem;
+    border: none;
+    cursor: pointer;
+    
+
+}
+@media(min-width:768px){
+    .boton{
+        display:inline-block ;/*se pone a lado pero no toma todo el espacio*/
+        
+    }
+}
+.boton--secundario{
+    background-color: var(--primario);
+}
+
+/*Sidebar*/
+.cursos{
+    list-style:none;
+}
+.widget-curso{
+    
+    border-bottom: 2px solid var(--gris);
+    margin-bottom: 2rem;/*va despues del borde*/
+}
+.widget-curso:last-of-type{
+    border: none;
+}
+
+.widget-curso__label{
+    font-family: var(--fuenteHeading);
+    font-weight: 700;
+}
+
+.widget-curso__info{
+    font-weight: 400;
+}
+.widget-curso__info,
+.widget-curso__label{
+    font-size: 2rem;
+}
+/**FOOTER**/
+.footer{
+    background-color: var(--negro);
+    align-items: center;
+    padding: 2rem 0;
+    margin-top: 4rem;
+    height: auto;
+}
+
+.contenedor__footer{
+    padding-top: 0;
+}
+/**NOSOTROS**/
+@media(min-width:768px){
+    .sobre-nosotros__imagen{
+        flex: 0 0 calc(50% - 1rem);
+    }
+    .sobre-nosotros__texto{
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+/**CURSOS**/
+.centrar-120px{
+    width: min(90%, 120rem);
+    margin: 0 auto;
+}
+
+.curso{
+    padding: 3rem 0;
+    border-bottom: 2px solid var(--gris);
+}
+
+@media(min-width:768px){
+    .curso{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap:2rem;
+    }
+}
+
+.curso:last-of-type{
+border-bottom: none ;
+}
+
+.curso__label{
+    font-size: 2rem;
+    font-family: var(--fuenteHeading);
+    font-weight: 700;
+}
+.curso__info{
+   font-weight: 400;
+}
+.curso_descripcion{
+    font-size: 1.6rem;
+    font-family: var(--fuenteParrafos);
+}
+/**ENTRADA**/
+.entrada__contenedor{
+   
+    width: min(80%, 80rem);
+    margin: 0 auto;
+}
+/**CONTACTO**/
+
+.contacto__imagen{
+    background-image: url(../img/contacto.jpg);
+    height: 40rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+        /**Formulario**/
+.contacto__form{
+    background-color: var(--blanco);
+    margin: -5rem auto 0 auto;
+    padding: 5rem;
+    width: 95%;
+    
+}
+@media(min-width:768px){
+    .contacto__form{
+        background-color: var(--blanco);
+        margin: -5rem auto 0 auto;
+        padding: 5rem;
+        width: min(85%,85rem);
+    }
+}
+@media(min-width:768px){
+    .campo{
+        display: flex;
+        padding: 2rem;
+    }
+}
+
+.campo__label{
+    display: flex;/*este flex es inecesario solo se crean cuando hay mas de dos elementos*/
+    text-align: right;
+    flex: 0 0 9rem;
+    padding-right: 2rem;/*recordar que el padding reduce del espacio designado en el flex*/
+    
+}
+.campo__field{
+    
+    flex: 1;/*le estas diciendo que como el otro elemnto no tiene un factor de crecimiento el tome todo lo restante*/
+    border: 2px solid var(--gris);
+}
+.campo__field--textarea{
+    height: 20rem;
+
+}

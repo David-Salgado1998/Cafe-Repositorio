@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Este comando ayuda a que se vea mejor en diuspositivosmoviles-->
+    
+    <!--Va pegado entre normalize y style-->
+    
+    <!--Prefetch cargar la pagina a la que comunmente se mueve el usuario-->
+    <link rel="prefretch" href="nosotros.html" as="document">
+   
+    <!--PRELOAD-->
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" crossorigin="crossorigin" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" crossorigin="crossorigin" as="font">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Blog de Cafe</title>
+</head>
+<body>
+    
+    <header class="header">
+
+        <div class="contenedor">
+            <div class="barra">
+                <a href="index.html" class="logo">
+                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">deCafé</span></h1>
+                </a>
+            </div>
+            <nav class="navegacion">
+                <a href="nosotros.html"  class="navegacion__enlace">Nosotros</a>
+                <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+            </nav>
+
+        </div><!--header-->
+
+        <div class="header__texto">
+            <h2 class="no-margin">
+                Blog de café con consejos y cursos
+            </h2>
+            <p class="no-margin">
+                Aprende de los expertos con las mejores recetas y consejos
+            </p>
+        </div>
+    </header>
+    <div class="contenedor contenedor__principal">
+        <main class="blog">
+            <h3>
+                Nuestro Blog
+            </h3>
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture>
+                        <source srcset="img/blog1.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog1.jpg" alt="entrada imagen">
+                    </picture>
+                    
+                </div>
+
+                <div class="entrada__contenido">
+                    <h4  class="no-margin">Tipos de Granos de Café</h4>
+                    <p>
+                        Proin varius leo vitae velit bibendum imperdiet. Nam condimentum ex nec ex ullamcorper, 
+                        mollis rhoncus felis pellentesque. Vestibulum et velit commodo, placerat metus a, 
+                        pellentesque sapien. Fusce nec eleifend risus, a congue est. Donec placerat, neque 
+                        eget iaculis mollis, arcu nulla finibus lorem, volutpat egestas lorem sem et nibh. 
+                        Sed viverra lorem nulla, in eleifend est semper sit amet. Sed faucibus ac magna non facilisis.
+                    </p>
+                    <a href="entrada.html" class="boton boton--principal">Leer entrada</a>
+                </div>
+
+                
+            </article>
+
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture>
+                        <source srcset="img/blog2.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog2.jpg" alt="entrada imagen">
+                    </picture>
+                    
+                </div>
+
+                <div class="entrada__contenido">
+                    <h4  class="no-margin">3 Deliciosas recetas de Café</h4>
+                    <p>
+                        Proin varius leo vitae velit bibendum imperdiet. Nam condimentum ex nec ex ullamcorper, 
+                        mollis rhoncus felis pellentesque. Vestibulum et velit commodo, placerat metus a, 
+                        pellentesque sapien. Fusce nec eleifend risus, a congue est. Donec placerat, neque 
+                        eget iaculis mollis, arcu nulla finibus lorem, volutpat egestas lorem sem et nibh. 
+                        Sed viverra lorem nulla, in eleifend est semper sit amet. Sed faucibus ac magna non facilisis.
+                    </p>
+                    <a href="entrada.html" class="boton boton--principal">Leer entrada</a>
+                </div>
+
+                <div>
+
+                </div>
+
+            </article>
+
+            <article class="entrada">
+                <div class="entrada__imagen">
+                    <picture>
+                        <source srcset="img/blog3.webp" type="image/webp">
+                        <img loading="lazy" src="img/blog3.jpg" alt="entrada imagen">
+                    </picture>
+                    
+                </div>
+
+                <div class="entrada__contenido">
+                    <h4  class="no-margin">Beneficios del Café</h4>
+                    <p>
+                        Proin varius leo vitae velit bibendum imperdiet. Nam condimentum ex nec ex ullamcorper, 
+                        mollis rhoncus felis pellentesque. Vestibulum et velit commodo, placerat metus a, 
+                        pellentesque sapien. Fusce nec eleifend risus, a congue est. Donec placerat, neque 
+                        eget iaculis mollis, arcu nulla finibus lorem, volutpat egestas lorem sem et nibh. 
+                        Sed viverra lorem nulla, in eleifend est semper sit amet. Sed faucibus ac magna non facilisis.
+                    </p>
+                    <a href="entrada.html" class="boton boton--principal">Leer entrada</a>
+                </div>
+
+                <div>
+
+                </div>
+
+            </article>
+        </main>
+
+        <aside class="sidebar"><!--por estandar de html debe de ir en un aside la barra lateral-->
+            <h3>Nuestros cursos y talleres</h3>
+            <ul class="cursos no-margin no-padding">
+                <li class="widget-curso ">
+                    <h4 class="no-margin no-padding">Técnicas de Extracción de Café</h4>
+                    <p class="widget-curso__label">Precio:<span class="widget-curso__info"> Gratis</span> </p>
+                    <p class="widget-curso__label">Cupo:<span class="widget-curso__info"> 20</span> </p>
+                    <a href="cursos.html" class="boton boton--secundario">Mas información</a>
+                </li>
+
+                <li class="widget-curso">
+                    <h4 class="no-margin">4 Recetas de Café para Principiantes</h4>
+                    <p class="widget-curso__label">Precio:<span class="widget-curso__info"> Gratis</span> </p>
+                    <p class="widget-curso__label">Cupo:<span class="widget-curso__info"> 20</span> </p>
+                    <a href="cursos.html" class="boton boton--secundario">Mas información</a>
+                </li>
+                
+            </ul>
+        </aside>
+    </div><!--contenedor princiapl-->
+    
+    <footer class="footer">
+        <div class="contenedor contenedor__footer">
+            <div class="barra">
+                <a href="index.html" class="logo">
+                    <h1 class="logo__nombre no-margin centrar-texto">Blog<span class="logo__bold">deCafé</span></h1>
+                </a>
+            </div>
+            <nav class="navegacion ">
+                <a href="nosotros.html"  class="navegacion__enlace">Nosotros</a>
+                <a href="cursos.html" class="navegacion__enlace">Cursos</a>
+                <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+            </nav>
+
+        </div><!--contenedor-->
+
+    </footer>
+    <script src="js/modernizr.js"></script>
+
+</body>
+</html>
